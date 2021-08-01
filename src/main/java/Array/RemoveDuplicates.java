@@ -3,6 +3,8 @@
     element appears only once. Return the number of unique items.
  */
 
+package Array;
+
 public class RemoveDuplicates {
 
     public static void main(String[] args) {
