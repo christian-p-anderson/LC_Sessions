@@ -17,4 +17,15 @@ public class TestArrays {
 
     }
 
+    @Test
+    public void TestBuyAndSell() {
+        BuyAndSell buyAndSell = new BuyAndSell();
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        int expectedResult = 7;
+
+        int result = buyAndSell.maxProfit(prices);
+
+        Assert.assertEquals(expectedResult, result);
+    }
+
 }
