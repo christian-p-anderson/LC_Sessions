@@ -40,4 +40,13 @@ public class TestArrays {
        Assert.assertArrayEquals(expectedResult, result);
     }
 
+    @Test
+    public void TestContainsDuplicate() {
+        ContainsDuplicate containsDuplicate = new ContainsDuplicate();
+        int[] nums = {1, 2, 4, 1, 3};
+        boolean result = containsDuplicate.containsDupe(nums);
+
+        Assert.assertTrue(result);
+    }
+
 }

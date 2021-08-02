@@ -8,7 +8,7 @@ package Array;
 import java.util.HashSet;
 
 public class ContainsDuplicate {
-    public boolean containsDuplicate(int[] nums) {
+    public boolean containsDupe(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
 
         for (Integer num: nums) {
