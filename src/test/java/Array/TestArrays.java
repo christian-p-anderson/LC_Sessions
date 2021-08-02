@@ -28,4 +28,16 @@ public class TestArrays {
         Assert.assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void TestRotateArray() {
+       RotateArray rotateArray = new RotateArray();
+       int[] nums = {1, 2, 3, 4, 5, 6, 7};
+       int k = 3;
+       int[] expectedResult = {5, 6, 7, 1, 2, 3, 4};
+
+       int[] result = rotateArray.rotate(nums, k);
+
+       Assert.assertArrayEquals(expectedResult, result);
+    }
+
 }
