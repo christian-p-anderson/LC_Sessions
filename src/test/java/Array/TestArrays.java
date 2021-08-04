@@ -60,4 +60,18 @@ public class TestArrays {
         Assert.assertEquals(expected, result);
 
     }
+
+    @Test
+    public void TestIntersectionOfTwoArrays() {
+        IntersectionOfTwoArrays intersectionOfTwoArrays = new IntersectionOfTwoArrays();
+
+        int[] nums1 = {1, 2, 2, 1};
+        int[] nums2 = {2, 2};
+
+        int[] expected = {2, 2};
+
+        int[] result = intersectionOfTwoArrays.intersect(nums1, nums2);
+
+        Assert.assertArrayEquals(expected, result);
+    }
 }
