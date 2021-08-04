@@ -49,4 +49,15 @@ public class TestArrays {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void TestSingleNumber() {
+        SingleNumber singleNumber = new SingleNumber();
+        int[] nums = {4, 1, 2, 1, 2};
+        int expected = 4;
+
+        int result = singleNumber.singleNumber(nums);
+
+        Assert.assertEquals(expected, result);
+
+    }
 }
