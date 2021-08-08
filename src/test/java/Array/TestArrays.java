@@ -74,4 +74,16 @@ public class TestArrays {
 
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void TestPlusPne() {
+        PlusOne plusOne = new PlusOne();
+
+        int[] digits = {4, 3, 2, 1};
+        int[] expected = {4, 3, 2, 2};
+
+        int[] result = plusOne.plusOne(digits);
+
+        Assert.assertArrayEquals(expected, result);
+    }
 }
