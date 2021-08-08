@@ -98,4 +98,28 @@ public class TestArrays {
 
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void MoveZeroes1() {
+        MoveZeroes moveZeroes = new MoveZeroes();
+
+        int[] nums = {0, 1, 0, 3, 12};
+        int[] expected = {1, 3, 12, 0, 0};
+
+        int[] result = moveZeroes.moveZeroes(nums);
+
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void MoveZeroes2() {
+        MoveZeroes moveZeroes = new MoveZeroes();
+
+        int[] nums = {0};
+        int[] expected = {0};
+
+        int[] result = moveZeroes.moveZeroes(nums);
+
+        Assert.assertArrayEquals(expected, result);
+    }
 }
