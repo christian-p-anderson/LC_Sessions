@@ -2,11 +2,7 @@ package Other;
 
 public class Fibonacci {
 
-    public static void main(String[] args) {
-        System.out.println(fib(3));
-    }
-
-    public static int fib(int N) {
+    public int fib(int N) {
         //2 base cases
         if (N == 0) return 0;
         if (N == 1) return 1;
@@ -25,7 +21,6 @@ public class Fibonacci {
         }
         return sum;
     }
-
 }
 
 /*
