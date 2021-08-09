@@ -23,7 +23,7 @@ public class DecodeWays {
             //an Integer
 
             //now we want to know if there is a mapping using oneDigit and twoDigits
-            if (oneDigit >= 1) {
+            if (oneDigit >= 1 && oneDigit <= 9) {
                 ways[i] += ways[i - 1];
             }
 
