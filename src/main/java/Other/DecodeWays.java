@@ -1,3 +1,5 @@
+package Other;
+
 public class DecodeWays {
     public int numWaysToDecode(String s) {
         if (s == null || s.length() == 0) {

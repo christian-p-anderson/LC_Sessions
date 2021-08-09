@@ -1,3 +1,5 @@
+package Other;
+
 public class CaesarCipher {
 
     public static StringBuffer shiftEncrypt(String text, int shift) {
