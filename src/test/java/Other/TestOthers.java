@@ -6,6 +6,19 @@ import org.junit.Test;
 public class TestOthers {
 
     @Test
+    public void TestCaesarCipher() {
+        CaesarCipher cc = new CaesarCipher();
+
+        String str = "AbcD";
+        int shift = 3;
+        String expected = "DefG";
+
+        String result = cc.shiftEncrypt(str, shift).toString();
+
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
     public void TestFibonacci() {
         Fibonacci fibonacci = new Fibonacci();
 

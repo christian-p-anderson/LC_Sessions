@@ -2,7 +2,7 @@ package Other;
 
 public class CaesarCipher {
 
-    public static StringBuffer shiftEncrypt(String text, int shift) {
+    public StringBuffer shiftEncrypt(String text, int shift) {
         StringBuffer result = new StringBuffer();
 
         /*
