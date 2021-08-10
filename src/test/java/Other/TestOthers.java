@@ -6,6 +6,18 @@ import org.junit.Test;
 public class TestOthers {
 
     @Test
+    public void TestBinaryToDecimal() {
+        BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
+
+        String binaryString = "1101";
+        int expected = 13;
+
+        int result = binaryToDecimal.ConvertBinaryToDecimal(binaryString);
+
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
     public void TestCaesarCipher() {
         CaesarCipher cc = new CaesarCipher();
 
