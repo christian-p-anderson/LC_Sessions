@@ -177,5 +177,6 @@ public class TestArrays {
         boolean result = validSudoku.isValidSudoku(board);
 
         Assert.assertFalse(result);
+        //first column has two '8'
     }
 }
