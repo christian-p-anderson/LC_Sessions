@@ -122,4 +122,18 @@ public class TestArrays {
 
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void TestTwoSum() {
+        TwoSum twoSum = new TwoSum();
+
+        int[] input = {3, 2, 4};
+        int target = 6;
+        int[] expected = {1, 2};
+
+        int[] result = twoSum.showTwoSum(input, target);
+
+        Assert.assertArrayEquals(expected, result);
+
+    }
 }
