@@ -41,7 +41,7 @@ public class TestArrays {
     }
 
     @Test
-    public void TestRotateImage() {
+    public void TestRotateImage1() {
         RotateImage rotateImage = new RotateImage();
 
         int[][] matrix = {
@@ -53,6 +53,28 @@ public class TestArrays {
                 {7, 4, 1},
                 {8, 5, 2},
                 {9, 6, 3}
+        };
+
+        int[][] actual = rotateImage.rotate(matrix);
+
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void TestRotateImage2() {
+        RotateImage rotateImage = new RotateImage();
+
+        int[][] matrix = {
+                {5, 1, 9, 11},
+                {2, 4, 8, 10},
+                {13, 3, 6, 7},
+                {15, 14, 12, 16}
+        };
+        int[][] expected = {
+                {15, 13, 2, 5},
+                {14, 3, 4, 1},
+                {12, 6, 8, 9},
+                {16, 7, 10, 11}
         };
 
         int[][] actual = rotateImage.rotate(matrix);
