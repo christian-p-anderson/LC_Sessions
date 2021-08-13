@@ -12,9 +12,9 @@ public class TestOthers {
         String binaryString = "1101";
         int expected = 13;
 
-        int result = binaryToDecimal.ConvertBinaryToDecimal(binaryString);
+        int actual = binaryToDecimal.ConvertBinaryToDecimal(binaryString);
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -25,9 +25,9 @@ public class TestOthers {
         int shift = 3;
         String expected = "DefG";
 
-        String result = cc.shiftEncrypt(str, shift).toString();
+        String actual = cc.shiftEncrypt(str, shift).toString();
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -37,9 +37,9 @@ public class TestOthers {
         int num = 10;
         int expected = 55;
 
-        int result = fibonacci.fib(num);
+        int actual = fibonacci.fib(num);
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -49,9 +49,9 @@ public class TestOthers {
         String str = "tHe World IS bUt a STAGE";
         String expected = "theWorldIsButAStage";
 
-        String result = convertToCamelCase.toCamelCase(str);
+        String actual = convertToCamelCase.toCamelCase(str);
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expected, actual);
 
     }
 }

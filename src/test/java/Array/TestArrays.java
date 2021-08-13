@@ -9,11 +9,11 @@ public class TestArrays {
     public void TestRemoveDuplicates() {
         RemoveDuplicates removeDuplicates = new RemoveDuplicates();
         int[] nums = {0,0,1,1,1,2,2,3,3,4};
-        int expectedResult = 5;
+        int expected = 5;
 
-        int result = removeDuplicates.removeDupes(nums);
+        int actual = removeDuplicates.removeDupes(nums);
 
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -21,11 +21,11 @@ public class TestArrays {
     public void TestBuyAndSell() {
         BuyAndSell buyAndSell = new BuyAndSell();
         int[] prices = {7, 1, 5, 3, 6, 4};
-        int expectedResult = 7;
+        int expected = 7;
 
-        int result = buyAndSell.maxProfit(prices);
+        int actual = buyAndSell.maxProfit(prices);
 
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -33,20 +33,20 @@ public class TestArrays {
        RotateArray rotateArray = new RotateArray();
        int[] nums = {1, 2, 3, 4, 5, 6, 7};
        int k = 3;
-       int[] expectedResult = {5, 6, 7, 1, 2, 3, 4};
+       int[] expected = {5, 6, 7, 1, 2, 3, 4};
 
-       int[] result = rotateArray.rotate(nums, k);
+       int[] actual = rotateArray.rotate(nums, k);
 
-       Assert.assertArrayEquals(expectedResult, result);
+       Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void TestContainsDuplicate() {
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
         int[] nums = {1, 2, 4, 1, 3};
-        boolean result = containsDuplicate.containsDupe(nums);
+        boolean actual = containsDuplicate.containsDupe(nums);
 
-        Assert.assertTrue(result);
+        Assert.assertTrue(actual);
     }
 
     @Test
@@ -55,9 +55,9 @@ public class TestArrays {
         int[] nums = {4, 1, 2, 1, 2};
         int expected = 4;
 
-        int result = singleNumber.singleNumber(nums);
+        int actual = singleNumber.singleNumber(nums);
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -70,9 +70,9 @@ public class TestArrays {
 
         int[] expected = {2, 2};
 
-        int[] result = intersectionOfTwoArrays.intersect(nums1, nums2);
+        int[] actual = intersectionOfTwoArrays.intersect(nums1, nums2);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -82,9 +82,9 @@ public class TestArrays {
         int[] digits = {4, 3, 2, 1};
         int[] expected = {4, 3, 2, 2};
 
-        int[] result = plusOne.plusOne(digits);
+        int[] actual = plusOne.plusOne(digits);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -94,9 +94,9 @@ public class TestArrays {
         int[] digits = {9, 9, 9};
         int[] expected = {1, 0, 0, 0};
 
-        int[] result = plusOne.plusOne(digits);
+        int[] actual = plusOne.plusOne(digits);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -106,9 +106,9 @@ public class TestArrays {
         int[] nums = {0, 1, 0, 3, 12};
         int[] expected = {1, 3, 12, 0, 0};
 
-        int[] result = moveZeroes.moveZeroes(nums);
+        int[] actual = moveZeroes.moveZeroes(nums);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -118,9 +118,9 @@ public class TestArrays {
         int[] nums = {0};
         int[] expected = {0};
 
-        int[] result = moveZeroes.moveZeroes(nums);
+        int[] actual = moveZeroes.moveZeroes(nums);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -131,9 +131,9 @@ public class TestArrays {
         int target = 6;
         int[] expected = {1, 2};
 
-        int[] result = twoSum.showTwoSum(input, target);
+        int[] actual = twoSum.showTwoSum(input, target);
 
-        Assert.assertArrayEquals(expected, result);
+        Assert.assertArrayEquals(expected, actual);
 
     }
 
@@ -143,19 +143,19 @@ public class TestArrays {
 
         char[][] board = {
             {'5','3','.','.','7','.','.','.','.'},
-            {'6','.','.','1','9','5','.','.','.'}, 
+            {'6','.','.','1','9','5','.','.','.'},
             {'.','9','8','.','.','.','.','6','.'},
             {'8','.','.','.','6','.','.','.','3'},
             {'4','.','.','8','.','3','.','.','1'},
             {'7','.','.','.','2','.','.','.','6'},
             {'.','6','.','.','.','.','2','8','.'},
             {'.','.','.','4','1','9','.','.','5'},
-            {'.','.','.','.','8','.','.','7','9'}        
+            {'.','.','.','.','8','.','.','7','9'}
         };
-        
-        boolean result = validSudoku.isValidSudoku(board);
 
-        Assert.assertTrue(result);
+        boolean actual = validSudoku.isValidSudoku(board);
+
+        Assert.assertTrue(actual);
     }
 
     @Test
@@ -174,9 +174,8 @@ public class TestArrays {
                 {'.','.','.','.','8','.','.','7','9'}
         };
 
-        boolean result = validSudoku.isValidSudoku(board);
+        boolean actual = validSudoku.isValidSudoku(board);
 
-        Assert.assertFalse(result);
-        //first column has two '8'
+        Assert.assertFalse(actual);
     }
 }
