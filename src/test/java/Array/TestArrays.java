@@ -41,6 +41,26 @@ public class TestArrays {
     }
 
     @Test
+    public void TestRotateImage() {
+        RotateImage rotateImage = new RotateImage();
+
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        int[][] expected = {
+                {7, 4, 1},
+                {8, 5, 2},
+                {9, 6, 3}
+        };
+
+        int[][] actual = rotateImage.rotate(matrix);
+
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void TestContainsDuplicate() {
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
         int[] nums = {1, 2, 4, 1, 3};

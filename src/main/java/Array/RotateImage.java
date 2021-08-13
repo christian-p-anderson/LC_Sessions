@@ -8,7 +8,7 @@ package Array;
 
 public class RotateImage {
 
-    public void rotate(int[][] matrix) {
+    public int[][] rotate(int[][] matrix) {
 
         int n = matrix.length;
 
@@ -24,10 +24,8 @@ public class RotateImage {
             }
         }
 
-
+        return matrix;
 
     }
-
-//    public int[][] printRotatedMatrix
 
 }
