@@ -13,4 +13,19 @@ public class ReverseAString {
 
     }
 
+    //the way LeetCode wanted it
+    public void stringReverse(char[] s) {
+        int n = s.length;
+
+        for (int i = 0; i < n / 2; i++) {
+            char temp = s[i];
+            s[i] = s[n - 1 - i];
+            s[n - 1 - i] = temp;
+        }
+        /*
+            The Hint was | The entire logic for reversing a string is based on using the opposite directional two-
+            pointer approach. Based on the hint, we arrived at the code block above.
+         */
+    }
+
 }
