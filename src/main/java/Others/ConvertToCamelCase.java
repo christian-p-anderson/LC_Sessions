@@ -1,6 +1,4 @@
-package Other;
-
-import java.util.Locale;
+package Others;
 
 public class ConvertToCamelCase {
 

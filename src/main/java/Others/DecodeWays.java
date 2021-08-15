@@ -1,4 +1,4 @@
-package Other;
+package Others;
 
 public class DecodeWays {
     public int numWaysToDecode(String s) {
