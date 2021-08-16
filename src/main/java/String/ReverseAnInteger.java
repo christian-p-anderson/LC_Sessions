@@ -12,23 +12,23 @@ public class ReverseAnInteger {
         }
 
         int prevReversedNum = 0;
-        int reversedNum = 0;
+        int result = 0;
 
         while (x != 0) {
             int currentDigit = x % 10;
 
-            reversedNum = reversedNum * 10 + currentDigit;
+            result = result * 10 + currentDigit;
 
-            if ((reversedNum - currentDigit) / 10 != prevReversedNum) {
+            //this deals with the constraint, "If reversing x causes the value to go outside the signed 32-bit integer
+            //range [-231, 231 - 1], then return 0."
+            if ((result - currentDigit) / 10 != prevReversedNum) {
                 return 0;
             }
 
-            prevReversedNum = reversedNum;
+            prevReversedNum = result;
             x = x / 10;
         }
-
-        return negativeFlag ? -reversedNum : reversedNum;
-
+        return negativeFlag ? -result : result;
     }
 
 
