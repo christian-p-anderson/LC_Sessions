@@ -7,8 +7,8 @@ public class ReverseAnInteger {
         //need to know when we are working with a negative int
         boolean negativeFlag = false;
         if (x < 0) {
-            negativeFlag = true;
             x = -x;
+            negativeFlag = true;
         }
 
         int prevReversedNum = 0;
@@ -17,7 +17,7 @@ public class ReverseAnInteger {
         while (x != 0) {
             int currentDigit = x % 10;
 
-            reversedNum = (reversedNum * 10) + currentDigit;
+            reversedNum = reversedNum * 10 + currentDigit;
 
             if ((reversedNum - currentDigit) / 10 != prevReversedNum) {
                 return 0;
@@ -27,11 +27,7 @@ public class ReverseAnInteger {
             x = x / 10;
         }
 
-        if (negativeFlag == true) {
-            return -reversedNum;
-        }
-
-        return reversedNum;
+        return negativeFlag ? -reversedNum : reversedNum;
 
     }
 
