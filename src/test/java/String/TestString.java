@@ -43,4 +43,16 @@ public class TestString {
         Assert.assertEquals(actual, result);
     }
 
+    @Test
+    public void TestFirstUniqueChar() {
+        FirstUniqueChar firstUniqueChar = new FirstUniqueChar();
+
+        String inputStr = "loveleetcode";
+        int actual = 2;
+
+        int result = firstUniqueChar.fistUniqChar(inputStr);
+
+        Assert.assertEquals(actual, result);
+    }
+
 }
