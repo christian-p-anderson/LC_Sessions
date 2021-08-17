@@ -79,4 +79,15 @@ public class TestString {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void TestValidAnagram2() {
+        ValidAnagram validAnagram = new ValidAnagram();
+
+        String s = "rat", t = "car";
+
+        boolean result = validAnagram.isAnagram(s, t);
+
+        Assert.assertFalse(result);
+    }
+
 }
