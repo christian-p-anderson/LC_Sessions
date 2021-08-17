@@ -68,4 +68,15 @@ public class TestString {
 
     }
 
+    @Test
+    public void TestValidAnagram1() {
+        ValidAnagram validAnagram = new ValidAnagram();
+
+        String s = "anagram", t = "nagaram";
+
+        boolean result = validAnagram.isAnagram(s, t);
+
+        Assert.assertTrue(result);
+    }
+
 }
