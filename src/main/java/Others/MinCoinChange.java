@@ -10,7 +10,7 @@ package Others;
 
 public class MinCoinChange {
 
-    public static int minCoins(int coins[], int V) {
+    public int minCoins(int coins[], int V) {
         // table[i] will be storing the minimum number of coins required for i value. So table[V] will have result
         int table[] = new int[V + 1];
 

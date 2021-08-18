@@ -54,4 +54,17 @@ public class TestOthers {
         Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void TestMinCoinChange() {
+        MinCoinChange minCoinChange = new MinCoinChange();
+
+        int[] coins = {9, 6, 5, 1};
+        int V = 11;
+        int expected = 2;
+
+        int actual = minCoinChange.minCoins(coins, V);
+
+        Assert.assertEquals(expected, actual);
+    }
 }
