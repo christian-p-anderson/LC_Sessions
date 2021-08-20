@@ -90,4 +90,16 @@ public class TestString {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void TestValidPalindrome() {
+
+        ValidPalindrome validPalindrome = new ValidPalindrome();
+
+        String s = "A man, a plan, a canal: Panama";
+
+        boolean result = validPalindrome.isPalindrome(s);
+
+        Assert.assertTrue(result);
+    }
+
 }
