@@ -4,6 +4,8 @@
 
 package String;
 
+import java.util.Locale;
+
 public class ValidPalindrome {
 
     public boolean isPalindrome(String s) {
@@ -15,14 +17,22 @@ public class ValidPalindrome {
         //while there are characters to compare
         while (i < j) {
 
-            //if there is a mismatch
-            if (s.charAt(i) != s.charAt(j)) {
+            //keep incrementing i until an alphanumeric character is reached
+            while (i < j && !Character.isLetterOrDigit(s.charAt(i))) {
+                i++;
+            }
+
+            //keep decrementing i until an alphanumeric character is reached
+            while (i < j && !Character.isLetterOrDigit(s.charAt(j))) {
+                j--;
+            }
+
+            //once we reach an alphanumeric character for i and j, and they haven't crossed each other and i and j
+            //are not equal to each other
+            if (i < j && Character.toLowerCase(s.charAt(i++)) != Character.toLowerCase(s.charAt(j--))) {
                 return false;
             }
 
-            //increment first pointer and decrement the other
-            i++;
-            j--;
         }
 
         //given string is a palindrome
