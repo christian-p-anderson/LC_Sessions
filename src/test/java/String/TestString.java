@@ -91,7 +91,7 @@ public class TestString {
     }
 
     @Test
-    public void TestValidPalindrome() {
+    public void TestValidPalindrome1() {
 
         ValidPalindrome validPalindrome = new ValidPalindrome();
 
@@ -100,6 +100,17 @@ public class TestString {
         boolean result = validPalindrome.isPalindrome(s);
 
         Assert.assertTrue(result);
+    }
+
+    @Test
+    public void TestValidPalindrome2() {
+
+        ValidPalindrome validPalindrome = new ValidPalindrome();
+        String s = "race a car";
+
+        boolean result = validPalindrome.isPalindrome(s);
+
+        Assert.assertFalse(result);
     }
 
 }
