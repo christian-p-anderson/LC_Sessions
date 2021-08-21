@@ -26,9 +26,9 @@
 
 package String;
 
-public class StingToIntegerAtoi {
+public class StringToIntegerAtoi {
 
-    public static int myAoi(String s) {
+    public int myAoi(String s) {
 
         //convert string to a character array
         char[] str = s.toCharArray();
