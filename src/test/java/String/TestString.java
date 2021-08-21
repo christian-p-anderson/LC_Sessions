@@ -113,4 +113,16 @@ public class TestString {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void TestStringToIntegerAtoi() {
+        StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
+
+        String s = "42";
+        int actual = 42;
+
+        int result = stringToIntegerAtoi.myAoi(s);
+
+        Assert.assertEquals(actual, result);
+    }
+
 }
