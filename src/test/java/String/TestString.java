@@ -114,11 +114,22 @@ public class TestString {
     }
 
     @Test
-    public void TestStringToIntegerAtoi() {
+    public void TestStringToIntegerAtoi1() {
         StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
 
         String s = "42";
         int actual = 42;
+
+        int result = stringToIntegerAtoi.myAoi(s);
+
+        Assert.assertEquals(actual, result);
+    }
+
+    @Test
+    public void TestStringToIntegerAtoi2() {
+        StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
+        String s = "-492784";
+        int actual = -492784;
 
         int result = stringToIntegerAtoi.myAoi(s);
 
