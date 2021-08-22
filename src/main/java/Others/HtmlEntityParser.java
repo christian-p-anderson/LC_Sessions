@@ -5,38 +5,39 @@ import java.util.HashMap;
 public class HtmlEntityParser {
 
     public String entityParser(String text) {
-        StringBuilder sb = new StringBuilder();
-        int start = 0;
+        char[] textArr = text.toCharArray();
+        int j = 0;
+        StringBuilder result = new StringBuilder();
+        HashMap<String,String> map = new HashMap();
 
-        HashMap<String, String> map = new HashMap<>();
-        map.put("&quot;" , "\"");
-        map.put("&pos;", "#");
-        map.put("@amp;", "&");
-        map.put("&gt;", ">");
-        map.put("&lt;", "<");
-        map.put("&frasl;", "/");
+        //Initialize map
+        map.put("quot","\"");
+        map.put("apos","\'");
+        map.put("amp","&");
+        map.put("gt",">");
+        map.put("lt","<");
+        map.put("frasl","/");
 
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            if (c == '&') {
-                sb.append(text.substring(start, i));
-                start = i;
-            } else if (c == ';') {
-                String str = text.substring(start, i + 1);
-                start = i + 1;
-                if(map.get(str) != null) {
-                    //TODO need to figure out how to handle single quote character
-                    if (map.get(str) == '#') {
-                        sb.append("'");
-                    } else {
-                        sb.append(map.get(str));
-                    }
-                } else {
-                    sb.append(str);
+
+        for(int i = 0 ; i < textArr.length; i++){
+            if(textArr[i] == '&'){
+                StringBuilder sb = new StringBuilder();
+                j = i + 1;
+                while( j < textArr.length && textArr[j] != ';'){
+                    sb.append(textArr[j]);
+                    j++;
                 }
+                String tempStr = sb.toString();
+                if(map.get(tempStr) != null){
+                    result.append(map.get(tempStr));
+                    i = j;
+                } else {
+                    result.append('&');
+                }
+            } else {
+                result.append(textArr[i]);
             }
         }
-        sb.append(text.substring(start));
-        return sb.toString();
+        return result.toString();
     }
 }
