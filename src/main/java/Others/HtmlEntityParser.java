@@ -25,6 +25,7 @@ public class HtmlEntityParser {
                 String str = text.substring(start, i + 1);
                 start = i + 1;
                 if(map.get(str) != null) {
+                    //TODO need to figure out how to handle single quote character
                     if (map.get(str) == '#') {
                         sb.append("'");
                     } else {
