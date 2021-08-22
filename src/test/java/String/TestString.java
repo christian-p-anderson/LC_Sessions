@@ -136,4 +136,18 @@ public class TestString {
         Assert.assertEquals(actual, result);
     }
 
+    @Test
+    public void TestImplementstrStr() {
+        ImplemementstrStr implemementstrStr = new ImplemementstrStr();
+
+        String haystack = "hello";
+        String needle = "ll";
+
+        int actual = 2;
+
+        int result = implemementstrStr.strStr(haystack, needle);
+
+        Assert.assertEquals(actual, result);
+    }
+
 }
