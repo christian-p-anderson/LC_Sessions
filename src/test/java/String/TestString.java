@@ -137,13 +137,27 @@ public class TestString {
     }
 
     @Test
-    public void TestImplementstrStr() {
+    public void TestImplementstrStr1() {
         ImplemementstrStr implemementstrStr = new ImplemementstrStr();
 
         String haystack = "hello";
         String needle = "ll";
 
         int actual = 2;
+
+        int result = implemementstrStr.strStr(haystack, needle);
+
+        Assert.assertEquals(actual, result);
+    }
+
+    @Test
+    public void TestImplementstrStr2() {
+        ImplemementstrStr implemementstrStr = new ImplemementstrStr();
+
+        String haystack = "aaaaa";
+        String needle = "bba";
+
+        int actual = -1;
 
         int result = implemementstrStr.strStr(haystack, needle);
 
