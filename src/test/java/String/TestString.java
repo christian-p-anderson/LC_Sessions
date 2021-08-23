@@ -178,4 +178,16 @@ public class TestString {
         Assert.assertEquals(actual, result);
     }
 
+    @Test
+    public void TestLongestCommonPrefix() {
+        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+
+        String[] strs = {"flower", "flow", "flight"};
+        String actual = "fl";
+
+        String result = longestCommonPrefix.longCommonPrefix(strs);
+
+        Assert.assertEquals(actual, result);
+    }
+
 }
