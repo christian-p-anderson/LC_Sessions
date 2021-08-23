@@ -179,11 +179,23 @@ public class TestString {
     }
 
     @Test
-    public void TestLongestCommonPrefix() {
+    public void TestLongestCommonPrefix1() {
         LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
 
         String[] strs = {"flower", "flow", "flight"};
         String actual = "fl";
+
+        String result = longestCommonPrefix.longCommonPrefix(strs);
+
+        Assert.assertEquals(actual, result);
+    }
+
+    @Test
+    public void TestLongestCommonPrefix2() {
+        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+
+        String[] strs = {"dog", "racecar", "car"};
+        String actual = "";
 
         String result = longestCommonPrefix.longCommonPrefix(strs);
 
