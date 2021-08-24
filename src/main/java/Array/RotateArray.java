@@ -10,15 +10,20 @@ public class RotateArray {
 
     public int[] rotate(int[] nums, int k) {
 
-        k %= nums.length;
+        //k is how many numbers you are going reverse
+        k = k % nums.length;
+        //reverse nums from 0 to nums.length - 1 | reverses the whole array
         reverse(nums, 0, nums.length - 1);
+        //reverse the first k numbers | 0 to k - 1
         reverse(nums, 0, k - 1);
+        //reverse the left-over numbers | k to nums.length - 1
         reverse(nums, k, nums.length - 1);
 
         return nums;
     }
 
     public void reverse(int[] nums, int start, int end) {
+        //swap things as you go through
         while (start < end) {
             int temp = nums[start];
             nums[start] = nums[end];
