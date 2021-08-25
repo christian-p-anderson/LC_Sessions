@@ -23,6 +23,8 @@ public class DeleteNodeInLinkedList {
 class ListNode {
     int val;
     ListNode next;
+
+    //constructor to create a new node
     ListNode(int x) {
         val = x;
     }
