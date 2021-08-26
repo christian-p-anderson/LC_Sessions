@@ -14,19 +14,9 @@ package LinkedList;
 
 public class DeleteNodeInLinkedList {
 
-    public void deleteNode(ListNode node) {
+    public void deleteNode(ListNodeZero node) {
         node.val = node.next.val;
         node.next = node.next.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    //constructor to create a new node
-    ListNode(int x) {
-        val = x;
     }
 }
 
