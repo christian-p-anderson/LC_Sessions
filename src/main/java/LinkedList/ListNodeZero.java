@@ -1,5 +1,6 @@
 /*
     Associated with DeleteNodeInLinkedList
+    Definition for singly-linked list
  */
 
 package LinkedList;
