@@ -12,9 +12,13 @@ public class MergeTwoSortedLists {
 
     public ListNodeTwo mergeTwoLists(ListNodeTwo l1, ListNodeTwo l2) {
 
+        //create a dummy node to build onto
         ListNodeTwo dummy = new ListNodeTwo(-1);
+        //
         ListNodeTwo head = dummy;
 
+        //look at both lists | take the first element of each list and determine which one is smaller | take the smaller
+        //element and put it into the list | move forward in that list by 1 element
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
                 dummy.next = l1;
@@ -26,12 +30,15 @@ public class MergeTwoSortedLists {
             dummy = dummy.next;
         }
 
+        //you may have a situation where one list still has remaining elements | determine which list has remaining
+        //elements and add those elements to the list
         if (l1 != null) {
             dummy.next = l1;
         } else {
             dummy.next = l2;
         }
 
+        //since the dummy node has a value of -1 start at the next element
         return head.next;
         }
 }
